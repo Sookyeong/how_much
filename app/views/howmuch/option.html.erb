@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>How much home</title>
+    <!-- Background Image --!>
+    <%= stylesheet_link_tag "option.scss"%>
+</head>
+<body>
+
+  <div class="jumbotron_option">
+  <form action="/howmuch/result" method="post" >
+    <p id="icon-x"><a href="/howmuch/set"><span class="glyphicon glyphicon-remove-circle"></span></a></p>
+    <div class="container">
+        <p id="baloon_q">언제야?</p>
+        <p id="baloon_a" class="col-md-offset-3">
+          <button class="button2">무관</button>
+          <button class="button2">평일</button>
+          <button class="button2">주말</button>
+        </p>
+        <p id="baloon_q">활동 장소는?</p>
+        <p id="ballon_a" class="col-md-offset-3">
+          <button class="button2">무관</button>
+          <button class="button2">실내</button>
+          <button class="button2">실외</button>
+        </p>
+    <button name="getcost" type="submit" class="button"> <b>전부 선택했다면</b>이 말풍선을 클릭해줘.</button>
+    </div>
+    </form>
+  </div>
+  
+  var selector, elems, makeActive;
+  
+  selector = '.button button2';
+  
+  elems = document.querySelectorAll(selector);
+  
+  makeActive = function () {
+      for (var i = 0; i < elems.length; i++)
+          elems[i].classList.remove('active');
+      
+      this.classList.add('active');
+  };
+  
+  for (var i = 0; i < elems.length; i++)
+      elems[i].addEventListener('mousedown', makeActive);
+
+<!--Bootstrap CDN--!>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

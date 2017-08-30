@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>How much</title>
+    <!-- Latest compiled and minified CSS -->
+<!--Bootstrap  CSS--!>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <%= stylesheet_link_tag "init.scss"%>
+</head>
+<body class="init_body">
+
+  <div class="logo">
+        <a href="<%=howmuch_set_path%>"/> <img src="../assets/logo.png" onmouseover="this.src='../assets/logo2.png'" onmouseout="this.src='../assets/logo.png'" alt="logo image"> </a>
+  </div>
+    
+  <div class="info">
+        <a href="/howmuch/homepage" class="button_Info">i</a>
+  </div>
+  <div class="init_container">
+    <p id="baloon_chat1">안녕?</p>
+    <p id="baloon_chat2">지금 주머니에 얼마나 있어?</p>
+    <p id="baloon_chat3"><b>그 행복 · · · 얼마면 돼?</b></p>
+  </div>
+  
+  <div class="info">
+    <a href="<%=howmuch_homepage_path%>" class="button_Info">i</a>
+  </div>
+<!--Bootstrap CDN--!>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

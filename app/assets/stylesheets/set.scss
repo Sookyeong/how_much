@@ -1,0 +1,54 @@
+html {
+  height:100vh;
+  background-image:url("/assets/background_1.jpg");
+}
+
+.set_cost{
+    position: fixed;
+    display:absolute;
+    margin:auto;
+    left:40%;
+    top:30%;
+    color: black;
+}
+
+.knob{
+    width: 104px;
+    height: 66px;
+    position: absolute;
+    vertical-align: middle;
+    margin-top: 66px;
+    margin-left: -152px;
+    border: 0px;
+    background: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-size: 40px;
+    line-height: normal;
+    font-family: Arial;
+    text-align: center;
+    color: rgb(135, 206, 235);
+    padding: 0px;
+    -webkit-appearance: none;
+}
+
+.set_cost a{
+    background:none;
+    position:absolute;
+    left:23%;
+    top:115%;
+    
+    margin:10px;
+    padding-top:3px;
+    padding-right:25px;
+    padding-bottom:3px;
+    padding-left:25px;
+    font-size:17px;
+    background-color:rgb(250,255,0);
+    border-radius:100px;
+    letter-spacing:0.2em;
+    font-weight:bold;
+    color:rgba(0,0,0,0.5);
+}

@@ -1,0 +1,86 @@
+<html id="card_html" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+
+
+    <title>How much</title>
+    <!-- Latest compiled and minified CSS -->
+<!--Bootstrap  CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <%= stylesheet_link_tag "card.scss"%>
+      <link rel="stylesheet" type="text/css" href="css/jquery.dynameter.css">
+</head>
+
+
+<body id="card_body">
+    <section id="clubs" class="section">
+        <div class="container">
+            <header class="section_hearder">
+                <h2 class="section_title">
+                    <span class="section_category"> A recommended course </span>
+                    Do you like the recommended course?
+                </h2>
+            </header>
+            
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                   <a href="<%=howmuch_set_path%>">  <button  type="button" class="btn btn-default btn-lg" >
+                       <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                       <!--onclick="goReplace('/howmuch/set')"-->
+                      
+                    </button>
+                     </a>
+      
+                    <button onClick="history.go(0)" type="button" class="btn btn-default btn-lg" id="repeat">
+                        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                       
+                    </button>
+                </div>
+    	    </div>
+    	    
+            <div class="cards row">
+                <div class="col-md-6 col-md-offset-3">
+                    <hr/>
+                    <% @show.each do |x| %>
+                        <div class="card-block">
+                            <h2 class="card-title" id="course_name"><%=x.course_name %></h4>
+                            <p class="card-info" ><b>1.<%=x.l_one%>원</b></p>
+                            <p class="card-text"><%=x.c_one%></p>
+                            <p class="card-info"><b>2.<%=x.l_two%>원</b></p>
+                            <p class="card-text"><%=x.c_two%></p>
+                            <p class="card-info"><b>3.<%=x.l_three%>원</b></p>
+                            <p class="card-text"><%=x.c_three%></p>
+                            <hr/>
+                        </div>
+                    <% end %>
+                    
+                    
+                    
+                    <%= @showsss %>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--Bootstrap CDN--!>
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dynameter.js"></script>
+    
+    <script>
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+    </script>
+                        
+    
+    <script> function goReplace(str) { location.replace(str); } </script>
+</body> 
+</html>

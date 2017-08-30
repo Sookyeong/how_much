@@ -1,0 +1,127 @@
+html {
+    height:100vh;
+   width: 100%;
+}
+.jumbotron_option {
+    background-image:url("/assets/background_1.jpg");
+    height:100vh;
+    padding-top:50px;
+}
+
+.container {
+    padding:3%;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    background-size: 100% 100%;
+    height: 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-color:rgba(0, 0, 0, 0.4);
+    border-radius:4%;
+}
+
+.Info{
+    padding:10%;
+    background-color:white;
+    border-radius:10px;
+}
+
+#baloon_q{
+    display:inline-block;
+    border-radius:10px;
+    padding:10px;
+    margin-left:15%;
+    background-color:rgb(250,255,0);
+    color:rgb(60,30,30);
+    margin-bottom:50px;
+    opacity: 0.8;
+}
+
+#baloon_a button{
+    display:inline-block;
+    border-radius:10px;
+    padding:10px;
+    background-color:none;
+    margin-bottom:50px;
+}
+
+.button2{
+    background-color:none;
+    color:black;
+    font-weight:bold;
+    padding:5px;
+    border-radius:3px;
+    margin-bottom:50px;
+    margin-right:80px;
+}
+
+.button2.active{
+    background-color:white;
+    color:black;
+    font-weight:bold;
+    padding:5px;
+    border-radius:3px;
+
+}
+
+#icon-x{
+    position:flexed;
+    float:right;
+    font-size:30px;
+    color:white;
+    margin-top:3%;
+    margin-right:18%;
+}
+
+#baloon_a{
+    margin-right:200px;
+}
+
+
+// 깜빡이는 버튼.
+.button {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 1em;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+   margin-left:15%;
+   
+}
+@-webkit-keyframes glowing {
+  0% { background-color:  #dadd11; -webkit-box-shadow: 0 0 3px #dadd11; }
+  50% { background-color:  #faff00; -webkit-box-shadow: 0 0 40px #faff00; }
+  100% { background-color: #dadd11; -webkit-box-shadow: 0 0 3px #dadd11; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #dadd11; -moz-box-shadow: 0 0 3px #dadd11; }
+  50% { background-color: #faff00; -moz-box-shadow: 0 0 40px #faff00; }
+  100% { background-color: #dadd11; -moz-box-shadow: 0 0 3px #dadd11; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #dadd11; box-shadow: 0 0 3px #dadd11; }
+  50% { background-color: #faff00; box-shadow: 0 0 40px #faff00; }
+  100% { background-color: #dadd110; box-shadow: 0 0 3px #dadd11; }
+}
+
+@keyframes glowing {
+  0% { background-color: #dadd11; box-shadow: 0 0 3px #dadd11; }
+  50% { background-color: #faff00; box-shadow: 0 0 40px #faff00; }
+  100% { background-color: #dadd11; box-shadow: 0 0 3px #dadd11; }
+}
+
+.button {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
